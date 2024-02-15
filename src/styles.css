@@ -1,0 +1,208 @@
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: lightsteelblue;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #437fc7;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+.page-background {
+    background-color:#437fc7;
+    padding: 20px;
+    margin: 10%;
+    border: 10px solid #F3EF6A;
+    border-radius: 10px;
+    
+}
+.page-background-project {
+    background-color:#437fc7;
+    padding: 20px;
+    margin: 5%;
+    border: 10px solid #F3EF6A;
+    border-radius: 10px;
+    
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 6em;
+    color: #ECCD00
+}
+
+.about-head {
+    font-size: 4em;
+    color: #ECCD00
+}
+
+h2 {
+    font-size: 2em;
+    color: #F3EF6A;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-pic {
+    width: 600px;
+    height: 600px;
+    border-radius: 0%;
+    
+}
+
+input,
+textarea {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+#contact-form {
+    background-color: #437fc7; 
+    max-width: 50%;
+    margin: 50px auto; 
+    padding: 20px; 
+    border-radius: 8px; 
+    font-family: 'Urbanist', sans-serif;
+}
+
+#social-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-button {
+    padding: 10px;
+    background-color: #ECCd00;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    width: 50px; /* Adjusted for button width */
+    margin: 0 10px;
+}
+
+.social-button:hover {
+    background-color: #0056b3;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.p-project {
+    margin-top: 70px;
+    font-size: 2em;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ECCd00;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resume-button {
+    width: 50%;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+    header {
+        display: block;
+        text-align: left;
+    }
+
+    header div {
+        text-align: center;
+    }
+
+    header a {
+        display: block;
+        margin: 10px auto;
+    }
+}

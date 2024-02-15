@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ryan Tabor</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Urbanist&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <div class="navBar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="contact.html">Contact</a>
+            </div>
+    </header>
+
+    <div class="page-background">
+        <div class="side-by-side">
+            <div>
+            <h1>Ryan Tabor</h1>
+            <h2>FastTrack Student</h2>
+            <p id="githubBio">[Github Bio]</p>
+            <a class= "resume-button"href="FastTrackResume.pdf" download>Download Resume</a>
+            </div>
+            <img id="githubProfilePicture" src="https://github.com/RyanT524.png" alt="Profile Picture">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch data from GitHub API
+            fetch("https://api.github.com/users/RyanT524")
+                .then(response => response.json())
+                .then(data => {
+                    // Update GitHub bio
+                    document.getElementById('githubBio').textContent = data.bio;
+
+                    document.getElementById('githubProfilePicture').src = data.avatar_url;
+                })
+                .catch(error => console.error('Error fetching GitHub data:', error));
+        });
+    </script>
+</body>
+
+</html>
